@@ -6,45 +6,38 @@
     <title>Can Hakan | Photography</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.min.css">
     <style>
-        body { background-color: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
-        
+        body { background-color: #000; color: #fff; font-family: sans-serif; margin: 0; }
         .hero { 
-            height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center; 
-            text-align: center; background: linear-gradient(to bottom, rgba(0,0,0,0.1), #000), 
-            url('https://i.postimg.cc/xkgCjrWg/MG-3907-Dx-O-Deep-PRIME-XD2s-(2).jpg');
-            background-size: cover; background-position: center 30%;
+            height: 80vh; display: flex; align-items: center; justify-content: center; 
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), #000), 
+            url('https://i.postimg.cc/xkgCjrWg/MG-3907-Dx-O-Deep-PRIME-XD2s-(2).jpg') center 30% / cover;
         }
-
         h1 { font-size: clamp(3rem, 10vw, 6rem); font-weight: 100; margin: 0; letter-spacing: -2px; }
-
-        nav { 
-            position: sticky; top: 0; background: rgba(0,0,0,0.95); padding: 30px 0; 
-            display: flex; justify-content: center; gap: 50px; border-bottom: 1px solid #1a1a1a; z-index: 100;
-        }
-        .nav-btn { 
-            background: none; border: none; color: #444; cursor: pointer; 
-            text-transform: uppercase; letter-spacing: 4px; font-size: 11px; transition: 0.3s;
-            padding-bottom: 8px; border-bottom: 2px solid transparent;
-        }
+        nav { position: sticky; top: 0; background: rgba(0,0,0,0.95); padding: 30px 0; display: flex; justify-content: center; gap: 50px; border-bottom: 1px solid #1a1a1a; z-index: 100; }
+        .nav-btn { background: none; border: none; color: #444; cursor: pointer; text-transform: uppercase; letter-spacing: 4px; font-size: 11px; padding-bottom: 8px; border-bottom: 2px solid transparent; }
         .nav-btn.active { color: #fff; border-bottom: 2px solid #fff; }
 
+        /* MASONRY-STYLE GRID (Fixes Stretching) */
         .gallery { 
-            max-width: 1600px; margin: 50px auto; padding: 0 20px;
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 25px; 
+            max-width: 1400px; margin: 50px auto; padding: 0 20px;
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+            grid-auto-flow: dense; gap: 20px; 
         }
-        .photo-card { border-radius: 4px; overflow: hidden; background: #0a0a0a; transition: transform 0.3s ease; cursor: pointer; }
-        .photo-card:hover { transform: scale(1.02); }
-        .photo-card img { width: 100%; height: 500px; display: block; object-fit: cover; }
+        .photo-card { border-radius: 4px; overflow: hidden; background: #0a0a0a; display: block; text-decoration: none; }
+        .photo-card img { width: 100%; height: auto; display: block; transition: 0.3s; }
+        .photo-card:hover img { opacity: 0.8; }
         
         .hidden { display: none !important; }
-        footer { padding: 120px 20px; text-align: center; color: #333; font-size: 10px; letter-spacing: 4px; }
+        footer { padding: 100px 20px; text-align: center; color: #333; font-size: 10px; letter-spacing: 4px; }
     </style>
 </head>
 <body>
 
     <section class="hero">
-        <h1>Can Hakan</h1>
-        <p style="letter-spacing: 10px; color: #777; font-size: 12px; margin-top: 15px;">WILDLIFE & CONCERTS</p>
+        <div style="text-align: center;">
+            <h1>Can Hakan</h1>
+            <p style="letter-spacing: 10px; color: #777; font-size: 12px; margin-top: 15px;">WILDLIFE & CONCERTS</p>
+        </div>
     </section>
 
     <nav>
@@ -53,48 +46,24 @@
     </nav>
 
     <main id="wildlife-gallery" class="gallery pswp-gallery">
-        <a class="photo-card" href="https://i.postimg.cc/xkgCjrWg/MG-3907-Dx-O-Deep-PRIME-XD2s-(2).jpg" data-pswp-width="2500" data-pswp-height="1667">
-            <img src="https://i.postimg.cc/xkgCjrWg/MG-3907-Dx-O-Deep-PRIME-XD2s-(2).jpg" alt="Wildlife">
-        </a>
-        <a class="photo-card" href="https://i.postimg.cc/d7n1QMzB/MG-3230-(3).jpg" data-pswp-width="2500" data-pswp-height="1667">
-            <img src="https://i.postimg.cc/d7n1QMzB/MG-3230-(3).jpg" alt="Wildlife">
-        </a>
-        <a class="photo-card" href="https://i.postimg.cc/WdGzKqSc/MG-3751-Dx-O-Deep-PRIME-XD2s-(1).jpg" data-pswp-width="2500" data-pswp-height="1667">
-            <img src="https://i.postimg.cc/WdGzKqSc/MG-3751-Dx-O-Deep-PRIME-XD2s-(1).jpg" alt="Wildlife">
-        </a>
-        <a class="photo-card" href="https://i.postimg.cc/MctTZkhs/MG-3970-Dx-O-Deep-PRIME-XD2s-(2).jpg" data-pswp-width="2500" data-pswp-height="1667">
-            <img src="https://i.postimg.cc/MctTZkhs/MG-3970-Dx-O-Deep-PRIME-XD2s-(2).jpg" alt="Wildlife">
-        </a>
-        <a class="photo-card" href="https://i.postimg.cc/XZxJNMTh/MG-3971-Dx-O-Deep-PRIME-XD2s-(1).jpg" data-pswp-width="2500" data-pswp-height="1667">
-            <img src="https://i.postimg.cc/XZxJNMTh/MG-3971-Dx-O-Deep-PRIME-XD2s-(1).jpg" alt="Wildlife">
-        </a>
-        <a class="photo-card" href="https://i.postimg.cc/YG9ShnHD/IMG-7686-(1).jpg" data-pswp-width="1667" data-pswp-height="2500">
-            <img src="https://i.postimg.cc/YG9ShnHD/IMG-7686-(1).jpg" alt="Wildlife">
-        </a>
-        <a class="photo-card" href="https://i.postimg.cc/LJKhN3ty/MG-0259-(1).jpg" data-pswp-width="2500" data-pswp-height="1667">
-            <img src="https://i.postimg.cc/LJKhN3ty/MG-0259-(1).jpg" alt="Wildlife">
-        </a>
-        <a class="photo-card" href="https://i.postimg.cc/rDXzQN1P/MG-2792-Dx-O-Deep-PRIME-XD2s.jpg" data-pswp-width="2500" data-pswp-height="1667">
-            <img src="https://i.postimg.cc/rDXzQN1P/MG-2792-Dx-O-Deep-PRIME-XD2s.jpg" alt="Wildlife">
-        </a>
-        <a class="photo-card" href="https://i.postimg.cc/BjTbyPN9/MG-2990-Dx-O-Deep-PRIME-XD2s-(1).jpg" data-pswp-width="2500" data-pswp-height="1667">
-            <img src="https://i.postimg.cc/BjTbyPN9/MG-2990-Dx-O-Deep-PRIME-XD2s-(1).jpg" alt="Wildlife">
-        </a>
+        <a class="photo-card" href="https://i.postimg.cc/xkgCjrWg/MG-3907-Dx-O-Deep-PRIME-XD2s-(2).jpg" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/xkgCjrWg/MG-3907-Dx-O-Deep-PRIME-XD2s-(2).jpg"></a>
+        <a class="photo-card" href="https://i.postimg.cc/d7n1QMzB/MG-3230-(3).jpg" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/d7n1QMzB/MG-3230-(3).jpg"></a>
+        <a class="photo-card" href="https://i.postimg.cc/WdGzKqSc/MG-3751-Dx-O-Deep-PRIME-XD2s-(1).jpg" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/WdGzKqSc/MG-3751-Dx-O-Deep-PRIME-XD2s-(1).jpg"></a>
+        <a class="photo-card" href="https://i.postimg.cc/MctTZkhs/MG-3970-Dx-O-Deep-PRIME-XD2s-(2).jpg" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/MctTZkhs/MG-3970-Dx-O-Deep-PRIME-XD2s-(2).jpg"></a>
+        <a class="photo-card" href="https://i.postimg.cc/XZxJNMTh/MG-3971-Dx-O-Deep-PRIME-XD2s-(1).jpg" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/XZxJNMTh/MG-3971-Dx-O-Deep-PRIME-XD2s-(1).jpg"></a>
+        <a class="photo-card" href="https://i.postimg.cc/YG9ShnHD/IMG-7686-(1).jpg" data-pswp-width="1667" data-pswp-height="2500"><img src="https://i.postimg.cc/YG9ShnHD/IMG-7686-(1).jpg"></a>
+        <a class="photo-card" href="https://i.postimg.cc/LJKhN3ty/MG-0259-(1).jpg" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/LJKhN3ty/MG-0259-(1).jpg"></a>
+        <a class="photo-card" href="https://i.postimg.cc/rDXzQN1P/MG-2792-Dx-O-Deep-PRIME-XD2s.jpg" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/rDXzQN1P/MG-2792-Dx-O-Deep-PRIME-XD2s.jpg"></a>
+        <a class="photo-card" href="https://i.postimg.cc/BjTbyPN9/MG-2990-Dx-O-Deep-PRIME-XD2s-(1).jpg" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/BjTbyPN9/MG-2990-Dx-O-Deep-PRIME-XD2s-(1).jpg"></a>
     </main>
 
     <main id="concert-gallery" class="gallery pswp-gallery hidden">
-        <a class="photo-card" href="https://i.postimg.cc/FfGRFt2w/20250711-230652(1).jpg" data-pswp-width="2500" data-pswp-height="1250">
-            <img src="https://i.postimg.cc/FfGRFt2w/20250711-230652(1).jpg" alt="Concert">
-        </a>
-        <a class="photo-card" href="https://i.postimg.cc/PpxqP3jF/20250711-220026-(1).jpg" data-pswp-width="2500" data-pswp-height="1400">
-            <img src="https://i.postimg.cc/PpxqP3jF/20250711-220026-(1).jpg" alt="Concert">
-        </a>
-        <a class="photo-card" href="https://i.postimg.cc/ZBRqC7mR/20250711-224335-(2).jpg" data-pswp-width="2500" data-pswp-height="1250">
-            <img src="https://i.postimg.cc/ZBRqC7mR/20250711-224335-(2).jpg" alt="Concert">
-        </a>
+        <a class="photo-card" href="https://i.postimg.cc/FfGRFt2w/20250711-230652(1).jpg" data-pswp-width="2500" data-pswp-height="1250"><img src="https://i.postimg.cc/FfGRFt2w/20250711-230652(1).jpg"></a>
+        <a class="photo-card" href="https://i.postimg.cc/PpxqP3jF/20250711-220026-(1).jpg" data-pswp-width="2500" data-pswp-height="1400"><img src="https://i.postimg.cc/PpxqP3jF/20250711-220026-(1).jpg"></a>
+        <a class="photo-card" href="https://i.postimg.cc/ZBRqC7mR/20250711-224335-(2).jpg" data-pswp-width="2500" data-pswp-height="1250"><img src="https://i.postimg.cc/ZBRqC7mR/20250711-224335-(2).jpg"></a>
     </main>
 
-    <footer>CAN HAKAN PHOTOGRAPHY &copy; 2026</footer>
+    <footer>CAN HAKAN &copy; 2026</footer>
 
     <script type="module">
         import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe-lightbox.esm.min.js';
@@ -105,7 +74,6 @@
         });
         lightbox.init();
     </script>
-
     <script>
         function showGallery(type) {
             document.getElementById('wildlife-gallery').classList.toggle('hidden', type !== 'wildlife');
