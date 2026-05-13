@@ -5,40 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Can Hakan | Photography</title>
     <style>
-        body { background: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; overflow-x: hidden; }
+        body { background-color: #000; color: #fff; font-family: -apple-system, sans-serif; margin: 0; padding: 0; }
+        
         .hero { 
-            height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; 
-            text-align: center; background: linear-gradient(to bottom, rgba(0,0,0,0.3), #000), 
+            height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center; 
+            text-align: center; background: linear-gradient(to bottom, rgba(0,0,0,0.1), #000), 
             url('https://i.postimg.cc/xkgCjrWg/MG-3907-Dx-O-Deep-PRIME-XD2s-(2).jpg');
             background-size: cover; background-position: center 30%;
         }
+
         h1 { font-size: clamp(3rem, 10vw, 6rem); font-weight: 100; margin: 0; letter-spacing: -2px; }
+
         nav { 
-            position: sticky; top: 0; background: rgba(0,0,0,0.9); padding: 25px 0; 
-            display: flex; justify-content: center; gap: 40px; border-bottom: 1px solid #1a1a1a; z-index: 100;
+            position: sticky; top: 0; background: rgba(0,0,0,0.95); padding: 30px 0; 
+            display: flex; justify-content: center; gap: 50px; border-bottom: 1px solid #1a1a1a; z-index: 100;
         }
         .nav-btn { 
             background: none; border: none; color: #444; cursor: pointer; 
-            text-transform: uppercase; letter-spacing: 3px; font-size: 11px; transition: 0.3s;
-            padding-bottom: 5px; border-bottom: 2px solid transparent;
+            text-transform: uppercase; letter-spacing: 4px; font-size: 11px; transition: 0.3s;
+            padding-bottom: 8px; border-bottom: 2px solid transparent;
         }
         .nav-btn.active { color: #fff; border-bottom: 2px solid #fff; }
+
         .gallery { 
-            max-width: 1400px; margin: 40px auto; padding: 0 20px;
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 20px; 
+            max-width: 1600px; margin: 50px auto; padding: 0 20px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; 
         }
-        .photo-card { height: 550px; border-radius: 4px; overflow: hidden; background: #0a0a0a; }
-        .photo-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-        .photo-card img:hover { transform: scale(1.03); }
-        .hidden { display: none; }
-        footer { padding: 80px 20px; text-align: center; color: #333; font-size: 10px; letter-spacing: 3px; }
+        .photo-card { border-radius: 2px; overflow: hidden; background: #0a0a0a; transition: 0.4s; }
+        .photo-card img { width: 100%; height: auto; display: block; object-fit: contain; }
+        
+        .hidden { display: none !important; }
+        footer { padding: 120px 20px; text-align: center; color: #333; font-size: 10px; letter-spacing: 4px; }
     </style>
 </head>
 <body>
 
     <section class="hero">
         <h1>Can Hakan</h1>
-        <p style="letter-spacing: 8px; color: #888; font-size: 11px; margin-top: 10px;">WILDLIFE & CONCERTS</p>
+        <p style="letter-spacing: 10px; color: #777; font-size: 12px; margin-top: 15px;">WILDLIFE & CONCERTS</p>
     </section>
 
     <nav>
@@ -64,7 +68,7 @@
         <div class="photo-card"><img src="https://i.postimg.cc/ZBRqC7mR/20250711-224335-(2).jpg"></div>
     </main>
 
-    <footer>CAN HAKAN PHOTOGRAPHY &copy; 2026</footer>
+    <footer>CAN HAKAN PHOTOGRAPHY &copy; 2026 • INSTAGRAM @HOMESLES</footer>
 
     <script>
         function showGallery(type) {
@@ -72,7 +76,6 @@
             document.getElementById('concert-gallery').classList.toggle('hidden', type !== 'concert');
             document.getElementById('btn-wildlife').classList.toggle('active', type === 'wildlife');
             document.getElementById('btn-concert').classList.toggle('active', type === 'concert');
-            window.scrollTo({ top: document.querySelector('nav').offsetTop, behavior: 'smooth' });
         }
     </script>
 </body>
