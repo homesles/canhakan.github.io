@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can Hakan | Photography</title>
+    <style>
+        body { background: #000; color: #fff; font-family: sans-serif; margin: 0; overflow-x: hidden; }
+        
+        /* Hero */
+        .hero { 
+            height: 70vh; display: flex; flex-direction: column; align-items: center; justify-content: center; 
+            text-align: center; background: linear-gradient(to bottom, rgba(0,0,0,0.4), #000), 
+            url('data:image/jpeg;base64,...'); /* Your Tabby Cat Data String Here */
+            background-size: cover; background-position: center 30%;
+        }
+        h1 { font-size: clamp(3rem, 10vw, 6rem); font-weight: 100; margin: 0; letter-spacing: -2px; }
+        
+        /* Navigation Toggle */
+        nav { 
+            position: sticky; top: 0; background: rgba(0,0,0,0.95); padding: 25px 0; 
+            display: flex; justify-content: center; gap: 40px; border-bottom: 1px solid #1a1a1a; z-index: 100;
+        }
+        .nav-btn { 
+            background: none; border: none; color: #444; cursor: pointer; 
+            text-transform: uppercase; letter-spacing: 3px; font-size: 11px; transition: 0.3s;
+            padding-bottom: 5px; border-bottom: 2px solid transparent;
+        }
+        .nav-btn.active { color: #fff; border-bottom: 2px solid #fff; }
+
+        /* Gallery Grid */
+        .gallery { 
+            max-width: 1400px; margin: 60px auto; padding: 0 20px;
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 15px; 
+        }
+        .photo-card { height: 500px; border-radius: 4px; overflow: hidden; background: #0a0a0a; }
+        .photo-card img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Can Hakan</h1>
+        <p style="letter-spacing: 5px; color: #888; font-size: 10px;">WILDLIFE & CONCERTS</p>
+    </section>
+
+    <nav>
+        <button id="btn-wildlife" class="nav-btn active" onclick="showGallery('wildlife')">Wildlife</button>
+        <button id="btn-concert" class="nav-btn" onclick="showGallery('concert')">Concerts</button>
+    </nav>
+
+    <main id="wildlife-gallery" class="gallery">
+        <div class="photo-card"><img src="data:image/jpeg;base64,..."></div>
+        </main>
+
+    <main id="concert-gallery" class="gallery hidden">
+        <div class="photo-card"><img src="data:image/jpeg;base64,..."></div>
+        <div class="photo-card"><img src="data:image/jpeg;base64,..."></div>
+        <div class="photo-card"><img src="data:image/jpeg;base64,..."></div>
+    </main>
+
+    <script>
+        function showGallery(type) {
+            document.getElementById('wildlife-gallery').classList.toggle('hidden', type !== 'wildlife');
+            document.getElementById('concert-gallery').classList.toggle('hidden', type !== 'concert');
+            document.getElementById('btn-wildlife').classList.toggle('active', type === 'wildlife');
+            document.getElementById('btn-concert').classList.toggle('active', type === 'concert');
+        }
+    </script>
+</body>
+</html>
