@@ -6,24 +6,29 @@
     <title>Can Hakan | Photography</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.min.css">
     <style>
-        body { background-color: #000; color: #fff; font-family: -apple-system, system-serif; margin: 0; }
+        body { background-color: #000; color: #fff; font-family: -apple-system, sans-serif; margin: 0; }
         .hero { 
             height: 80vh; display: flex; align-items: center; justify-content: center; 
             background: linear-gradient(to bottom, rgba(0,0,0,0.2), #000), 
-            url('https://i.postimg.cc/xkgCjrWg/MG-3907-Dx-O-Deep-PRIME-XD2s-(2).jpg') center 30% / cover;
+            url('https://i.postimg.cc/xkgCjrWg/MG-3907-Dx-O-Deep-PRIME-XD2s-(2).jpg?v=2') center 30% / cover;
         }
         h1 { font-size: clamp(3rem, 10vw, 6rem); font-weight: 100; margin: 0; letter-spacing: -2px; }
         nav { position: sticky; top: 0; background: rgba(0,0,0,0.95); padding: 30px 0; display: flex; justify-content: center; gap: 50px; border-bottom: 1px solid #1a1a1a; z-index: 100; }
         .nav-btn { background: none; border: none; color: #444; cursor: pointer; text-transform: uppercase; letter-spacing: 4px; font-size: 11px; padding-bottom: 8px; border-bottom: 2px solid transparent; }
         .nav-btn.active { color: #fff; border-bottom: 2px solid #fff; }
 
+        /* Strict Grid - No Stretching */
         .gallery { 
             max-width: 1400px; margin: 50px auto; padding: 0 20px;
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 20px; 
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 25px; 
         }
         .photo-card { border-radius: 4px; overflow: hidden; background: #0a0a0a; display: block; }
-        .photo-card img { width: 100%; height: auto; display: block; transition: 0.3s; cursor: zoom-in; }
-        .photo-card:hover img { opacity: 0.8; }
+        .photo-card img { 
+            width: 100% !important; 
+            height: auto !important; /* Forces natural proportions */
+            max-height: 700px; /* Prevents vertical images from being too tall */
+            display: block; object-fit: contain; background: #000;
+        }
         
         .hidden { display: none !important; }
         footer { padding: 100px 20px; text-align: center; color: #333; font-size: 10px; letter-spacing: 4px; }
@@ -44,24 +49,24 @@
     </nav>
 
     <main id="wildlife-gallery" class="gallery pswp-gallery">
-        <a class="photo-card" href="https://i.postimg.cc/xkgCjrWg/MG-3907-Dx-O-Deep-PRIME-XD2s-(2).jpg" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/xkgCjrWg/MG-3907-Dx-O-Deep-PRIME-XD2s-(2).jpg"></a>
-        <a class="photo-card" href="https://i.postimg.cc/d7n1QMzB/MG-3230-(3).jpg" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/d7n1QMzB/MG-3230-(3).jpg"></a>
-        <a class="photo-card" href="https://i.postimg.cc/WdGzKqSc/MG-3751-Dx-O-Deep-PRIME-XD2s-(1).jpg" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/WdGzKqSc/MG-3751-Dx-O-Deep-PRIME-XD2s-(1).jpg"></a>
-        <a class="photo-card" href="https://i.postimg.cc/MctTZkhs/MG-3970-Dx-O-Deep-PRIME-XD2s-(2).jpg" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/MctTZkhs/MG-3970-Dx-O-Deep-PRIME-XD2s-(2).jpg"></a>
-        <a class="photo-card" href="https://i.postimg.cc/XZxJNMTh/MG-3971-Dx-O-Deep-PRIME-XD2s-(1).jpg" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/XZxJNMTh/MG-3971-Dx-O-Deep-PRIME-XD2s-(1).jpg"></a>
-        <a class="photo-card" href="https://i.postimg.cc/YG9ShnHD/IMG-7686-(1).jpg" data-pswp-width="1667" data-pswp-height="2500"><img src="https://i.postimg.cc/YG9ShnHD/IMG-7686-(1).jpg"></a>
-        <a class="photo-card" href="https://i.postimg.cc/LJKhN3ty/MG-0259-(1).jpg" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/LJKhN3ty/MG-0259-(1).jpg"></a>
-        <a class="photo-card" href="https://i.postimg.cc/rDXzQN1P/MG-2792-Dx-O-Deep-PRIME-XD2s.jpg" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/rDXzQN1P/MG-2792-Dx-O-Deep-PRIME-XD2s.jpg"></a>
-        <a class="photo-card" href="https://i.postimg.cc/BjTbyPN9/MG-2990-Dx-O-Deep-PRIME-XD2s-(1).jpg" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/BjTbyPN9/MG-2990-Dx-O-Deep-PRIME-XD2s-(1).jpg"></a>
+        <a class="photo-card" href="https://i.postimg.cc/xkgCjrWg/MG-3907-Dx-O-Deep-PRIME-XD2s-(2).jpg?v=2" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/xkgCjrWg/MG-3907-Dx-O-Deep-PRIME-XD2s-(2).jpg?v=2"></a>
+        <a class="photo-card" href="https://i.postimg.cc/d7n1QMzB/MG-3230-(3).jpg?v=2" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/d7n1QMzB/MG-3230-(3).jpg?v=2"></a>
+        <a class="photo-card" href="https://i.postimg.cc/WdGzKqSc/MG-3751-Dx-O-Deep-PRIME-XD2s-(1).jpg?v=2" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/WdGzKqSc/MG-3751-Dx-O-Deep-PRIME-XD2s-(1).jpg?v=2"></a>
+        <a class="photo-card" href="https://i.postimg.cc/MctTZkhs/MG-3970-Dx-O-Deep-PRIME-XD2s-(2).jpg?v=2" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/MctTZkhs/MG-3970-Dx-O-Deep-PRIME-XD2s-(2).jpg?v=2"></a>
+        <a class="photo-card" href="https://i.postimg.cc/XZxJNMTh/MG-3971-Dx-O-Deep-PRIME-XD2s-(1).jpg?v=2" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/XZxJNMTh/MG-3971-Dx-O-Deep-PRIME-XD2s-(1).jpg?v=2"></a>
+        <a class="photo-card" href="https://i.postimg.cc/YG9ShnHD/IMG-7686-(1).jpg?v=2" data-pswp-width="1667" data-pswp-height="2500"><img src="https://i.postimg.cc/YG9ShnHD/IMG-7686-(1).jpg?v=2"></a>
+        <a class="photo-card" href="https://i.postimg.cc/LJKhN3ty/MG-0259-(1).jpg?v=2" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/LJKhN3ty/MG-0259-(1).jpg?v=2"></a>
+        <a class="photo-card" href="https://i.postimg.cc/rDXzQN1P/MG-2792-Dx-O-Deep-PRIME-XD2s.jpg?v=2" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/rDXzQN1P/MG-2792-Dx-O-Deep-PRIME-XD2s.jpg?v=2"></a>
+        <a class="photo-card" href="https://i.postimg.cc/BjTbyPN9/MG-2990-Dx-O-Deep-PRIME-XD2s-(1).jpg?v=2" data-pswp-width="2500" data-pswp-height="1667"><img src="https://i.postimg.cc/BjTbyPN9/MG-2990-Dx-O-Deep-PRIME-XD2s-(1).jpg?v=2"></a>
     </main>
 
     <main id="concert-gallery" class="gallery pswp-gallery hidden">
-        <a class="photo-card" href="https://i.postimg.cc/FfGRFt2w/20250711-230652(1).jpg" data-pswp-width="2500" data-pswp-height="1250"><img src="https://i.postimg.cc/FfGRFt2w/20250711-230652(1).jpg"></a>
-        <a class="photo-card" href="https://i.postimg.cc/PpxqP3jF/20250711-220026-(1).jpg" data-pswp-width="2500" data-pswp-height="1400"><img src="https://i.postimg.cc/PpxqP3jF/20250711-220026-(1).jpg"></a>
-        <a class="photo-card" href="https://i.postimg.cc/ZBRqC7mR/20250711-224335-(2).jpg" data-pswp-width="2500" data-pswp-height="1250"><img src="https://i.postimg.cc/ZBRqC7mR/20250711-224335-(2).jpg"></a>
+        <a class="photo-card" href="https://i.postimg.cc/FfGRFt2w/20250711-230652(1).jpg?v=2" data-pswp-width="2500" data-pswp-height="1250"><img src="https://i.postimg.cc/FfGRFt2w/20250711-230652(1).jpg?v=2"></a>
+        <a class="photo-card" href="https://i.postimg.cc/PpxqP3jF/20250711-220026-(1).jpg?v=2" data-pswp-width="2500" data-pswp-height="1400"><img src="https://i.postimg.cc/PpxqP3jF/20250711-220026-(1).jpg?v=2"></a>
+        <a class="photo-card" href="https://i.postimg.cc/ZBRqC7mR/20250711-224335-(2).jpg?v=2" data-pswp-width="2500" data-pswp-height="1250"><img src="https://i.postimg.cc/ZBRqC7mR/20250711-224335-(2).jpg?v=2"></a>
     </main>
 
-    <footer>CAN HAKAN &copy; 2026</footer>
+    <footer>CAN HAKAN PHOTOGRAPHY &copy; 2026</footer>
 
     <script type="module">
         import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe-lightbox.esm.min.js';
@@ -76,10 +81,8 @@
         function showGallery(type) {
             document.getElementById('wildlife-gallery').classList.toggle('hidden', type !== 'wildlife');
             document.getElementById('concert-gallery').classList.toggle('hidden', type !== 'concert');
-            document.getElementById('btn-wildlife').classList.add(type === 'wildlife' ? 'active' : 'inactive');
-            document.getElementById('btn-wildlife').classList.remove(type === 'wildlife' ? 'inactive' : 'active');
-            document.getElementById('btn-concert').classList.add(type === 'concert' ? 'active' : 'inactive');
-            document.getElementById('btn-concert').classList.remove(type === 'concert' ? 'inactive' : 'active');
+            document.getElementById('btn-wildlife').classList.toggle('active', type === 'wildlife');
+            document.getElementById('btn-concert').classList.toggle('active', type === 'concert');
         }
     </script>
 </body>
